@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Music Note</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="option-section">
+      <fieldset class="notation-section">
+        <legend>Notation</legend>
+        <label>Select one or more</label>
+        <select multiple id="notation">
+          <option value="solfege" selected>Solfege</option>
+          <option value="letter" title="International">Letter</option>
+        </select>
+      </fieldset>
+      <fieldset class="timer-section">
+        <legend>Timer</legend>
+        <div>
+          <button id="toggleTimerBtn">Enable</button>
+          <span id="timerIntervalDisplay">3 s</span>
+        </div>
+        <div>
+          <label>Interval : </label>
+          <input
+            type="range"
+            id="timerInterval"
+            min="1"
+            max="10"
+            step="0.5"
+            value="3"
+          />
+        </div>
+      </fieldset>
+      <fieldset class="voice-section">
+        <legend>Voice</legend>
+        <button id="toggleVoiceBtn">Enable</button>
+        <div>
+          <label>Volume : </label>
+          <input
+            type="range"
+            id="voiceVolumeInput"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.5"
+          />
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="notranslate" id="note"></div>
+  </body>
+</html>
